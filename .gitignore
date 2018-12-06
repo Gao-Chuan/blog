@@ -5,7 +5,7 @@ __pycache__
 *.key
 .idea
 ip
-setting.py
+settings.py
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
