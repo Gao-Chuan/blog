@@ -446,11 +446,11 @@ body {
 }
 .main-inner {
   margin: 0 auto;
-  width: 700px;
+  width: 70%;
 }
 @media (min-width: 1600px) {
   .container .main-inner {
-    width: 900px;
+    width: 90%;
   }
 }
 .footer {
