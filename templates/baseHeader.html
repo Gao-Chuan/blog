@@ -8,8 +8,23 @@
         {{date}}</b>
       <br />
       <br />
-      <a href="/">Home</a>
-      <a href="/about">about</a>
+{#      <a href="/">Home</a>#}
+                <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+
+            Home
+          </a>
+        </li>
+     <li class="menu-item menu-item-about">
+          <a href="/about/" rel="section">
+
+              <i class="menu-item-icon fa fa-fw fa-user"></i> <br />
+
+            About
+          </a>
+        </li>
     </center>
   {%  block content %}
   {% endblock %}
