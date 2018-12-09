@@ -1,0 +1,803 @@
+{% extends 'archives/archives.html' %}
+{% block paper %}
+<html>
+<head><meta charset="utf-8"><style>#right-panel {
+    background-color: #fff;
+}
+
+#right-panel .cover-top {
+    background: linear-gradient(to bottom, #fff 50%, transparent);
+}
+
+#cover-bottom #cover-bottom-background-right {
+    background: #fff;
+}
+
+@font-face {
+  font-family: octicons-link;
+  src: url(data:font/woff;charset=utf-8;base64,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) format('woff');
+}
+
+#container {
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  color: #373737;
+  font-family: "Roboto", "Noto Sans", "Ubuntu", "Helvetica Neue", Helvetica, "Segoe UI", Arial, sans-serif, "Noto Sans CJK SC", "Source Han Sans SC", "Microsoft Yahei";
+  font-size: 14px;
+  line-height: 2;
+  word-wrap: break-word;
+  background-color: #fff;
+}
+
+#container a {
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+#container a:active,
+#container a:hover {
+  outline-width: 0;
+}
+
+#container strong {
+  font-weight: inherit;
+}
+
+#container strong {
+  font-weight: bolder;
+}
+
+#container h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+#container img {
+  border-style: none;
+}
+
+#container svg:not(:root) {
+  overflow: hidden;
+}
+
+#container code,
+#container kbd,
+#container pre {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 1em;
+}
+
+#container hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+#container input {
+  font: inherit;
+  margin: 0;
+}
+
+#container input {
+  overflow: visible;
+}
+
+#container button:-moz-focusring,
+#container [type="button"]:-moz-focusring,
+#container [type="reset"]:-moz-focusring,
+#container [type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+#container [type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+#container table {
+  border-spacing: 0;
+  border-collapse: collapse;
+}
+
+#container td,
+#container th {
+  padding: 0;
+}
+
+#container * {
+  box-sizing: border-box;
+}
+
+#container input {
+  font: 13px/1.4 Helvetica, arial, nimbussansl, liberationsans, freesans, clean, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+}
+
+#container a {
+  color: #4078c0;
+  text-decoration: none;
+}
+
+#container a:hover,
+#container a:active {
+  text-decoration: underline;
+}
+
+#container hr {
+  height: 0;
+  margin: 15px 0;
+  overflow: hidden;
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid #ddd;
+}
+
+#container hr::before {
+  display: table;
+  content: "";
+}
+
+#container hr::after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+#container h1 {
+  font-size: 30px;
+}
+
+#container h2 {
+  font-size: 21px;
+}
+
+#container h3 {
+  font-size: 16px;
+}
+
+#container h4 {
+  font-size: 14px;
+}
+
+#container h5 {
+  font-size: 12px;
+}
+
+#container h6 {
+  font-size: 11px;
+}
+
+#container p {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#container blockquote {
+  margin: 0;
+}
+
+#container ul,
+#container ol {
+  padding-left: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container ol ol,
+#container ul ol {
+  list-style-type: lower-roman;
+}
+
+#container ul ul ol,
+#container ul ol ol,
+#container ol ul ol,
+#container ol ol ol {
+  list-style-type: lower-alpha;
+}
+
+#container dd {
+  margin-left: 0;
+}
+
+#container code {
+  font-family: "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  font-size: 12px;
+}
+
+#container pre {
+  margin-top: 0;
+  margin-bottom: 0;
+  font: 12px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+}
+
+#container .pl-0 {
+  padding-left: 0 !important;
+}
+
+#container .pl-1 {
+  padding-left: 3px !important;
+}
+
+#container .pl-2 {
+  padding-left: 6px !important;
+}
+
+#container .pl-3 {
+  padding-left: 12px !important;
+}
+
+#container .pl-4 {
+  padding-left: 24px !important;
+}
+
+#container .pl-5 {
+  padding-left: 36px !important;
+}
+
+#container .pl-6 {
+  padding-left: 48px !important;
+}
+
+#container .form-select::-ms-expand {
+  opacity: 0;
+}
+
+#container:before {
+  display: table;
+  content: "";
+}
+
+#container:after {
+  display: table;
+  clear: both;
+  content: "";
+}
+
+#container>*:first-child {
+  margin-top: 0 !important;
+}
+
+#container>*:last-child {
+  margin-bottom: 0 !important;
+}
+
+#container a:not([href]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+#container .anchor {
+  display: inline-block;
+  padding-right: 2px;
+  margin-left: -18px;
+}
+
+#container .anchor:focus {
+  outline: none;
+}
+
+#container h1,
+#container h2,
+#container h3,
+#container h4,
+#container h5,
+#container h6 {
+  margin-top: 1em;
+  margin-bottom: 16px;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+#container h1 .octicon-link,
+#container h2 .octicon-link,
+#container h3 .octicon-link,
+#container h4 .octicon-link,
+#container h5 .octicon-link,
+#container h6 .octicon-link {
+  color: #000;
+  vertical-align: middle;
+  visibility: hidden;
+}
+
+#container h1:hover .anchor,
+#container h2:hover .anchor,
+#container h3:hover .anchor,
+#container h4:hover .anchor,
+#container h5:hover .anchor,
+#container h6:hover .anchor {
+  text-decoration: none;
+}
+
+#container h1:hover .anchor .octicon-link,
+#container h2:hover .anchor .octicon-link,
+#container h3:hover .anchor .octicon-link,
+#container h4:hover .anchor .octicon-link,
+#container h5:hover .anchor .octicon-link,
+#container h6:hover .anchor .octicon-link {
+  visibility: visible;
+}
+
+#container h1 {
+  padding-bottom: 0.3em;
+  font-size: 2.25em;
+  line-height: 1.2;
+  border-bottom: 1px solid #eee;
+}
+
+#container h1 .anchor {
+  line-height: 1;
+}
+
+#container h2 {
+  padding-bottom: 0.3em;
+  font-size: 1.75em;
+  line-height: 1.225;
+  border-bottom: 1px solid #eee;
+}
+
+#container h2 .anchor {
+  line-height: 1;
+}
+
+#container h3 {
+  font-size: 1.5em;
+  line-height: 1.43;
+}
+
+#container h3 .anchor {
+  line-height: 1.2;
+}
+
+#container h4 {
+  font-size: 1.25em;
+}
+
+#container h4 .anchor {
+  line-height: 1.2;
+}
+
+#container h5 {
+  font-size: 1em;
+}
+
+#container h5 .anchor {
+  line-height: 1.1;
+}
+
+#container h6 {
+  font-size: 1em;
+  color: #777;
+}
+
+#container h6 .anchor {
+  line-height: 1.1;
+}
+
+#container p,
+#container blockquote,
+#container ul,
+#container ol,
+#container dl,
+#container table,
+#container pre {
+  margin-top: 0;
+  margin-bottom: 16px;
+}
+
+#container hr {
+  height: 4px;
+  padding: 0;
+  margin: 16px 0;
+  background-color: #e7e7e7;
+  border: 0 none;
+}
+
+#container ul,
+#container ol {
+  padding-left: 2em;
+}
+
+#container ul ul,
+#container ul ol,
+#container ol ol,
+#container ol ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+#container li>p {
+  margin-top: 16px;
+}
+
+#container dl {
+  padding: 0;
+}
+
+#container dl dt {
+  padding: 0;
+  margin-top: 16px;
+  font-size: 1em;
+  font-style: italic;
+  font-weight: bold;
+}
+
+#container dl dd {
+  padding: 0 16px;
+  margin-bottom: 16px;
+}
+
+#container blockquote {
+  padding: 0 15px;
+  color: #777;
+  border-left: 4px solid #ddd;
+}
+
+#container blockquote>:first-child {
+  margin-top: 0;
+}
+
+#container blockquote>:last-child {
+  margin-bottom: 0;
+}
+
+#container table {
+  display: block;
+  width: 100%;
+  overflow: auto;
+  word-break: normal;
+  word-break: keep-all;
+}
+
+#container table th {
+  font-weight: bold;
+}
+
+#container table th,
+#container table td {
+  padding: 6px 13px;
+  border: 1px solid #ddd;
+}
+
+#container table tr {
+  background-color: #fff;
+  border-top: 1px solid #ccc;
+}
+
+#container table tr:nth-child(2n) {
+  background-color: #f8f8f8;
+}
+
+#container img {
+  max-width: 100%;
+  box-sizing: content-box;
+  background-color: #fff;
+}
+
+#container code {
+  padding: 0;
+  padding-top: 0.2em;
+  padding-bottom: 0.2em;
+  margin: 0;
+  font-size: 85%;
+  background-color: rgba(0,0,0,0.04);
+  border-radius: 3px;
+}
+
+#container code:before,
+#container code:after {
+  letter-spacing: -0.2em;
+  content: "\00a0";
+}
+
+#container pre>code {
+  padding: 0;
+  margin: 0;
+  font-size: 100%;
+  word-break: normal;
+  white-space: pre;
+  background: transparent;
+  border: 0;
+}
+
+#container .highlight {
+  margin-bottom: 16px;
+}
+
+#container .highlight pre,
+#container pre {
+  padding: 16px;
+  overflow: auto;
+  font-size: 85%;
+  line-height: 1.45;
+  background-color: #f7f7f7;
+  border-radius: 3px;
+}
+
+#container .highlight pre {
+  margin-bottom: 0;
+  word-break: normal;
+}
+
+#container pre {
+  word-wrap: normal;
+}
+
+#container pre code {
+  display: inline;
+  max-width: initial;
+  padding: 0;
+  margin: 0;
+  overflow: initial;
+  line-height: inherit;
+  word-wrap: normal;
+  background-color: transparent;
+  border: 0;
+}
+
+#container pre code:before,
+#container pre code:after {
+  content: normal;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font-size: 11px;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .pl-c {
+  color: #969896;
+}
+
+#container .pl-c1,
+#container .pl-s .pl-v {
+  color: #0086b3;
+}
+
+#container .pl-e,
+#container .pl-en {
+  color: #795da3;
+}
+
+#container .pl-s .pl-s1,
+#container .pl-smi {
+  color: #333;
+}
+
+#container .pl-ent {
+  color: #63a35c;
+}
+
+#container .pl-k {
+  color: #a71d5d;
+}
+
+#container .pl-pds,
+#container .pl-s,
+#container .pl-s .pl-pse .pl-s1,
+#container .pl-sr,
+#container .pl-sr .pl-cce,
+#container .pl-sr .pl-sra,
+#container .pl-sr .pl-sre {
+  color: #183691;
+}
+
+#container .pl-v {
+  color: #ed6a43;
+}
+
+#container .pl-id {
+  color: #b52a1d;
+}
+
+#container .pl-ii {
+  background-color: #b52a1d;
+  color: #f8f8f8;
+}
+
+#container .pl-sr .pl-cce {
+  color: #63a35c;
+  font-weight: bold;
+}
+
+#container .pl-ml {
+  color: #693a17;
+}
+
+#container .pl-mh,
+#container .pl-mh .pl-en,
+#container .pl-ms {
+  color: #1d3e81;
+  font-weight: bold;
+}
+
+#container .pl-mq {
+  color: #008080;
+}
+
+#container .pl-mi {
+  color: #333;
+  font-style: italic;
+}
+
+#container .pl-mb {
+  color: #333;
+  font-weight: bold;
+}
+
+#container .pl-md {
+  background-color: #ffecec;
+  color: #bd2c00;
+}
+
+#container .pl-mi1 {
+  background-color: #eaffea;
+  color: #55a532;
+}
+
+#container .pl-mdr {
+  color: #795da3;
+  font-weight: bold;
+}
+
+#container .pl-mo {
+  color: #1d3e81;
+}
+
+#container kbd {
+  display: inline-block;
+  padding: 3px 5px;
+  font: 11px "Roboto Mono", "Ubuntu Mono", "Menlo", "Consolas", monospace;
+  line-height: 10px;
+  color: #555;
+  vertical-align: middle;
+  background-color: #fcfcfc;
+  border: solid 1px #ccc;
+  border-bottom-color: #bbb;
+  border-radius: 3px;
+  box-shadow: inset 0 -1px 0 #bbb;
+}
+
+#container .full-commit .btn-outline:not(:disabled):hover {
+  color: #4078c0;
+  border: 1px solid #4078c0;
+}
+
+#container :checked+.radio-label {
+  position: relative;
+  z-index: 1;
+  border-color: #4078c0;
+}
+
+#container .octicon {
+  display: inline-block;
+  vertical-align: text-top;
+  fill: currentColor;
+}
+
+#container .task-list-item {
+  list-style-type: none;
+}
+
+#container .task-list-item+.task-list-item {
+  margin-top: 3px;
+}
+
+#container .task-list-item input {
+  margin: 0 0.2em 0.25em -1.6em;
+  vertical-align: middle;
+}
+
+#container hr {
+  border-bottom-color: #eee;
+}
+</style></head><body id="container" class="export export-html"><span i="3"><h2 id="-">序</h2>
+</span><span i="6"><p>洋务运动与明治维新似乎是比较相似的改革，为何中国失败了日本成功了？</p>
+</span><span i="8"><p>这是2017年春或者2016年冬我写的总结，今日整理如下。</p>
+</span><span i="10"><p>致谢：klaus彼时的资料查询</p>
+</span><span i="12"><h2 id="-">发起人</h2>
+</span><span i="15"><ul>
+<li><span i="15"><p>洋务运动</p>
+</span><span i="18"><p>  洋务运动的发起人是部分地方官吏。此次运动无中央政府的强力支持，且有来自其他官员的阻力。</p>
+</span><span i="21"><p>  彼时中国的官员并无“国家”的概念，更多的是一种封疆大吏的僵化思想，认为各个行政区间各不相干。</p>
+</span></li>
+<li><span i="22"><p>明治维新</p>
+</span><span i="25"><p>  明治维新的发起人是日本权利核心。此次运动得到了日本中央政权的强力支持。这种强力支持在<a href="https://zh.wikipedia.org/wiki/%E5%B2%A9%E5%80%89%E4%BD%BF%E7%AF%80%E5%9C%98">岩仓使节团</a>的人选中有体现。</p>
+</span></li>
+<li><span i="26"><p>为何</p>
+</span><span i="29"><ul>
+<li><span i="29"><p>日本</p>
+</span><span i="30"><ul>
+<li><span i="30">此时下层武士刚刚推翻幕府，天皇刚掌权。</span></li>
+<li><span i="31">天皇需要一场改革来清理内部</span></li>
+<li><span i="32">此时日本属于封建主义，推行革命算是革手下的命</span></li>
+<li><span i="33">一部分被称为“兰学家”的日本高级知识分子致力于西方文化（任何国家）的传播。热衷翻译书籍传播知识。</span></li>
+</ul>
+</span></li>
+<li><span i="34"><p>中国</p>
+</span><span i="35"><ul>
+<li><span i="35">此时中国属于中央集权，若是改革多半要革掉一部分皇帝自己的命</span></li>
+<li><span i="36">政府对平民提防不减，领导者希望民众愚昧。</span></li>
+<li><span i="37">长年信奉儒家文化</span></li>
+<li><span i="38">“天朝上国”概念深入彼时人心，高级知识分子故步自封。这些知识分子对社会风气与掌权者观念有重要的影响。</span></li>
+</ul>
+</span></li>
+</ul>
+</span></li>
+</ul>
+</span><span i="41"><p>中国文化是中国发源的。出于盛行的“面子”文化以及深植人心的传统观念，清朝学者难以直接说【放弃】</p>
+</span><span i="43"><p>日本在古代受到过中国文化的灌输，但这是外来的，说它不好、不完善是有挡箭牌的。或者当时的日本人根本不在乎这些？我不清楚中国的“面子”这东西在日本有没有传播。</p>
+</span><span i="45"><h2 id="-">指导思想</h2>
+</span><span i="48"><ul>
+<li><span i="48"><p>洋务运动</p>
+</span><span i="51"><ul>
+<li><span i="51"><p>运动的受众</p>
+</span><span i="54"><p>这场运动只是几个官员自己玩，人民参与度不高。彼时的中国官员，中国政府似乎从未在意过基层人民。这或许是长年儒家文化熏陶的结果，也可能是长期愚民政策实施的必然后果。这场运动中，或许有人目的单纯，不过还可以说它是部分政府官员为获得更多政治资本而发起的革新，既得利益者太多。</p>
+</span><span i="57"><p>按中国的传统文化，一切不属于彼时中国政府推行的学术都是”奇技淫巧“。知识分子对”奇技淫巧“不感兴趣；非知识分子对一切知识都不感兴趣。此时懂外语的大多是商人，但商人大多只懂贸易时的外语，对兰学家的工作——”翻译书籍“毫不感兴趣。</p>
+</span><span i="60"><p>换句话说，我认为这场运动中，发起人并不关心中国文明是否进步。只关心中国能否“造出一些东西”。</p>
+</span><span i="63"><p>不过需要指出的是：李鸿章派遣的留洋学生，虽未直接帮到当时的中国，但对中国后来的发展产生深远的影响。</p>
+</span></li>
+<li><span i="64"><p>直接指导思想</p>
+</span><span i="67"><p>“中学为本，西学为用”——只动皮毛，不动筋骨。只引进机器，不引进技术。只引进懂技术的人，不引进技术本身。彼时的做法：直接购买国外产品、请外国人来华办厂。</p>
+</span><span i="70"><p>仔细说来还是那句话：只关心能不能“造出东西”，不关心中国科技的进步。或者彼时的发起者们惧怕中国人民的知识水平的进步？</p>
+</span></li>
+</ul>
+</span></li>
+<li><span i="71"><p>明治维新</p>
+</span><span i="74"><ul>
+<li><span i="74"><p>运动的受众</p>
+</span><span i="77"><p>有兰学家的存在，大量外文书籍被翻译。明治维新时，日本全国大办西学。</p>
+</span><span i="80"><p>领导明治维新的大多是年轻有志的青年。</p>
+</span></li>
+<li><span i="81"><p>直接指导思想</p>
+</span><span i="84"><p>日本看得见并且愿意指出自己的弱点。愿意进行”内外皆新“的改革。</p>
+</span></li>
+</ul>
+</span></li>
+<li><span i="85"><p>对比</p>
+</span><span i="88"><ul>
+<li><span i="88">中国</span><span i="89"><ul>
+<li><span i="89">只有资本引进，无知识引进</span></li>
+<li><span i="90">只动皮毛，不动筋骨</span></li>
+</ul>
+</span></li>
+<li><span i="91">日本</span><span i="92"><ul>
+<li><span i="92">引进知识，引进文化</span></li>
+<li><span i="93">内外皆新</span></li>
+</ul>
+</span></li>
+</ul>
+</span></li>
+</ul>
+</span><span i="96"><h2 id="-">国际形势</h2>
+</span><span i="99"><p>清朝时的国际形势不允许一个强大的中国存在。</p>
+</span><span i="101"><p>与之对比，英国需要一条足够强壮但能够被拴住的恶犬——日本本国内匮乏的资源就是英国人的链子。此处在辽东半岛的<em>马关条约</em>中有体现。</p>
+</span><span i="103"><p>在经济上，工业化需要大量的启动资金与原材料。中国的改革开放算是全国众筹，彼时的日本则只能依靠英国的借款。</p>
+</span><span i="105"><h2 id="-">记</h2>
+</span><span i="108"><blockquote>
+<span i="108"><p>“弱小和无知不是生存的障碍-傲慢才是”——《三体》</p>
+</span><span i="110"><p>”歌者眼里地球文明几个世纪的全貌，是地球毁灭的原因。前面部分以弱小和无知为主，无法避免，后面部分，当蝗虫发现自己不是受神宠爱的种族，却依然自己说服自己、自己催眠自己、自己感动自己，这就不能全怪弱小和无知，而应该怪傲慢了。“——《三体》评论</p>
+</span><span i="112"><p>爱并不是什么复杂的东西，也并不”崇高“。不基于逻辑而基于如此虚浮的东西做判断便是取死之道。清朝时的”天朝上国“也是同样。或许彼时有无法做出正确选择的理由，不过作为皇帝在此背景下丝毫作为也无，那也是把脖子伸进了套索。——某痛恨程心的《三体》读者的评论</p>
+</span></blockquote>
+</span></body>
+</html>
+
+{% endblock %}
