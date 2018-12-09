@@ -1232,7 +1232,7 @@ pre .javascript .function {
   transform: rotate(30deg);
 }
 .posts-expand {
-  padding-top: 10px;
+  padding-top: 40px;
 }
 @media (max-width: 767px) {
   .posts-expand {
@@ -1428,6 +1428,16 @@ pre .javascript .function {
 }
 @media (max-width: 767px) {
   .posts-expand .post-title {
+    font-size: 22px;
+  }
+}.posts-enpand-lessblank .post-title {
+  font-size: 26px;
+  text-align: center;
+  word-break: break-word;
+  font-weight: 400;
+}
+@media (max-width: 767px) {
+  .posts-expand-lessblank .post-title {
     font-size: 22px;
   }
 }
