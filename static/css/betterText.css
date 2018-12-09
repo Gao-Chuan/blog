@@ -1232,7 +1232,7 @@ pre .javascript .function {
   transform: rotate(30deg);
 }
 .posts-expand {
-  padding-top: 40px;
+  padding-top: 10px;
 }
 @media (max-width: 767px) {
   .posts-expand {
