@@ -13,5 +13,6 @@ def list(request):
 def archives(request, name):
     data = {}
     data['date'] = str(datetime.datetime.now()).split('.')[0]
+    data['name'] = '洋务运动与明治维新'
 
     return render(request, 'archives/posts/'+name+'.html', data)
