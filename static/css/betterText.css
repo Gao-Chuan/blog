@@ -1430,7 +1430,8 @@ pre .javascript .function {
   .posts-expand .post-title {
     font-size: 22px;
   }
-}.posts-enpand-lessblank .post-title {
+}
+.posts-enpand-lessblank .post-title {
   font-size: 26px;
   text-align: center;
   word-break: break-word;
