@@ -6,11 +6,11 @@
     <head>
         <link href="{% static "css/betterText.css"%}" rel="stylesheet" type="text/css">
     </head>
-        <div class="main-inner">
+    <div id="posts" class="posts-expand">
             <h1 class="post-title" itemprop="name headline">{{ name }}</h1>
             <div class="post-body">
                 {% block paper %}
                 {% endblock %}
             </div>
-        </div>
+    </div>
 {% endblock %}
